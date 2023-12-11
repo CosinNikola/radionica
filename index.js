@@ -4,4 +4,12 @@ function plusPlus(orig_x) {
     return x;
 }
 
-console.log(increment(5));
+let ukupno = 1;
+const izracunajFaktorijel = n => {
+    ukupno *= n--;
+    if(n > 0)
+        izracunajFaktorijel(n);
+    return ukupno;
+}
+
+console.log(izracunajFaktorijel(5));
