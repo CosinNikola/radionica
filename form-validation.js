@@ -22,20 +22,20 @@ let validationMessages = {
 
 
 const validateForm = () => {
-    if(firstname !== "" && lastname !== "" && email !== "" && phone !== "") {
+    if(f.firstname.value !== "" && f.lastname.value !== "" && f.email.value !== "" && f.phone.value !== "") {
         validationMessages.formError = "";
-        if(firstname.length < 3) {
+        if(f.firstname.value.length < 3) {
             validationMessages.firstnameError = "Ime mora sadrzati minimum 3 karaktera!";
             firstnameError.style.display = "block";
         }
 
-        else if(lastname.length < 3){
+        else if(f.lastname.value.length < 3){
             validationMessages.lastnameError = "Prezime mora sadrzati minimum 3 karaktera!";
             lastnameError.style.display = "block";
         } 
 
-        else if(!email.match(emailRegex)) {
-            validationMessages.emailError = "Email mora sadrzati znak @!";
+        else if(!f.email.value.match(emailRegex)) {
+            validationMessages.emailError = "Email nije validan!";
             emailError.style.display = "block";
         }
         else {
@@ -47,7 +47,7 @@ const validateForm = () => {
             validationMessages.lastnameError = "";
             validationMessages.emailError = "";
             alert("Registracija uspesna!");
-            console.log(`${firstname}, ${lastname}, ${email}, ${phone} `);
+            console.log(`${f.firstname.value}, ${f.lastname.value}, ${f.email.value}, ${f.phone.value} `);
         }
     }
     else {
