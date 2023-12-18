@@ -1,0 +1,12 @@
+label, input {
+    display: block;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+}
+
+.error-msg {
+    color: red;
+    display: none;
+}
