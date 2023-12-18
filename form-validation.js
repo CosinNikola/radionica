@@ -4,11 +4,6 @@ let firstnameError = document.querySelector("#firstnameError");
 let lastnameError = document.querySelector("#lastnameError");
 let emailError = document.querySelector("#emailError");
 
-let firstname = f.firstname.value;
-let lastname = f.lastname.value;
-let email = f.email.value;
-let phone = f.phone.value;
-
 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 let errorFields = document.querySelectorAll(".error-msg");
