@@ -4,6 +4,8 @@ let firstnameError = document.querySelector("#firstnameError");
 let lastnameError = document.querySelector("#lastnameError");
 let emailError = document.querySelector("#emailError");
 
+let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 let errorFields = document.querySelectorAll(".error-msg");
 
 let validationMessages = {
@@ -26,7 +28,7 @@ const validateForm = () => {
             lastnameError.style.display = "block";
         } 
 
-        else if(!f.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+        else if(!f.email.value.match(emailRegex)) {
             validationMessages.emailError = "Email mora sadrzati znak @!";
             emailError.style.display = "block";
         }
